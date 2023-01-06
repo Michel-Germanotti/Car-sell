@@ -1,0 +1,14 @@
+<div class="container py-5" *ngIf="currentOffer">
+  <h1 class="display-5">{{ currentOffer.title }}</h1>
+  <div class="row">
+    <div class="col-xl-6 mb-3">
+      <img [src]="currentOffer.photo" alt="Offer photo" class="w-100">
+    </div>
+    <div class="col-xl-6">
+      <h2 class="display-6">{{ currentOffer.brand }} {{ currentOffer.model }}</h2>
+      <p>{{ currentOffer.price | currency: 'EUR':'symbol':'1.2-2':'fr' }}</p>
+      <p>{{ currentOffer.description }}</p>
+    </div>
+  </div>
+
+</div>
